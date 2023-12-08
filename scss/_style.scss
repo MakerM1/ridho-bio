@@ -1,0 +1,383 @@
+body {
+    font-family: 'Inter', sans-serif;
+
+    .main-header {
+        background-color: $mainColor;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 10000;
+
+        .logo {
+            font-size: 40px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .main-nav {
+            max-width: 475px;
+            width: 100%;
+
+            ul {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    color: white;
+                    font-size: 20px;
+
+                    &:nth-child(1) {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .s1 {
+        margin-top: 60px;
+        padding: 10px 10px 0 10px;
+        background-color: $backgroundColor2;
+
+        .s1-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 169px;
+            flex-wrap: wrap;
+
+            .s1-left-side {
+                h1 {
+                    @include sectionTitle(700);
+                }
+
+                h5 {
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 24.2px;
+                    color: $secondaryColor;
+                    margin-bottom: 20px;
+                }
+
+                input[type=button] {
+                    @include mainButtonStyle(#F8F9FA, $mainColor);
+                }
+
+                @media (max-width: 643px) {
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+            }
+
+            .s1-right-side {
+                .img-container {
+                    position: relative;
+                    z-index: 10;
+
+                    .background-svg {
+                        position: absolute;
+                        transform: translate(0%, -50%);
+                        left: 0;
+                        top: 50%;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+
+    .s2 {
+        padding: 10px;
+
+        .s2-container {
+            width: 100%;
+            margin: 93px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .s2-left-side {
+                margin-right: 10px;
+
+                h2 {
+                    @include sectionTitle(600);
+                }
+
+                @media (max-width: 827px) {
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+            }
+
+            .s2-right-side {
+                p {
+                    columns: $mainColor;
+                    font-size: 20px;
+                    font-weight: 400;
+                    max-width: 608px;
+                    width: 100%;
+                    margin-bottom: 30px
+                }
+
+                .hire-button {
+                    @include mainButtonStyle(#F8F9FA, $mainColor);
+                    margin-right: 20px
+                }
+
+                .cv-button {
+                    @include mainButtonStyle($mainColor, white);
+                    border: 2px solid $mainColor;
+                }
+
+                @media (max-width: 827px) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .s3 {
+        padding: 10px;
+        background-color: $backgroundColor2;
+
+        .top-part {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 66px;
+
+            h2 {
+                @include sectionTitle(600);
+            }
+
+            p {
+                max-width: 600px;
+                width: 100%;
+                color: $secondaryColor;
+                margin: 0 auto;
+            }
+        }
+
+        .bottom-part {
+            max-width: 880px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 89px;
+
+            .card {
+                padding: 10px;
+                max-width: 270px;
+                width: 100%;
+                text-align: center;
+                background-color: $mainColor;
+                border-radius: 10px;
+                color: white;
+                box-shadow: 0px 5px 15px -1px rgba(0, 0, 0, 0.75);
+
+                img {
+                    margin-top: 35px;
+                    margin-bottom: 20px;
+                }
+
+                h5 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    max-width: 210px;
+                    width: 100%;
+                    margin: 0 auto;
+                    margin-bottom: 63px;
+                    font-size: 20px;
+                    color: rgba(248, 249, 250, 1);
+                }
+            }
+        }
+    }
+
+    .s4 {
+        padding: 10px;
+        text-align: center;
+
+        h2 {
+            @include sectionTitle(600);
+            margin-bottom: 20px;
+            margin-bottom: 42px;
+        }
+
+        .lesson-cards {
+            max-width: 880px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 41px;
+
+            .lesson {
+                max-width: 430px;
+                width: 100%;
+                height: 200px;
+                border-radius: 10px;
+                background-color: $cardColor1;
+                position: relative;
+                margin-bottom: 20px;
+
+                .img-placeholder {
+                    max-width: 200px;
+                    width: 100%;
+                    height: 200px;
+                    border-radius: 10px;
+                    background-color: $cardColor2;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                .info {
+                    margin-left: 200px;
+                    text-align: left;
+                    padding: 16px;
+
+                    h5 {
+                        font-size: 24px;
+                        font-weight: 500;
+                        color: $mainColor;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        max-width: 200px;
+                        width: 100%;
+                        color: $mainColor;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .s5 {
+        text-align: center;
+        padding: 10px;
+        background-color: $backgroundColor2;
+
+        h2 {
+            @include sectionTitle(600);
+            margin-bottom: 21px;
+            margin-top: 34px;
+        }
+
+        .s5-container {
+            display: flex;
+            max-width: 821px;
+            width: 100%;
+            justify-content: space-around;
+            margin: 0 auto;
+            align-items: flex-start;
+            margin-bottom: 34px;
+
+            .s5-left-side {
+                form {
+                    max-width: 610px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    text-align: left;
+
+                    label {
+                        color: $mainColor;
+                        font-weight: 700;
+                        font-size: 24px;
+                        margin-bottom: 20px;
+                    }
+
+                    .name-email {
+                        max-width: 610px;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .email {
+                            @include inputStyle;
+                            max-width: 300px;
+                            width: 100%;
+                            height: 40px;
+                            margin-right: 10px
+                        }
+
+                        .name {
+                            @include inputStyle;
+                            max-width: 300px;
+                            width: 100%;
+                            height: 40px;
+                        }
+                    }
+
+                    textarea {
+                        @include inputStyle;
+                        max-width: 610px;
+                        width: 100%;
+                        height: 120px;
+                        resize: none;
+                        margin-bottom: 20px
+                    }
+
+                    input[type=submit] {
+                        @include mainButtonStyle($mainColor, white);
+                        align-self: flex-end;
+                    }
+                }
+            }
+
+            .s5-right-side {
+                text-align: left;
+
+                h5 {
+                    color: $mainColor;
+                    font-weight: 700;
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+
+                ul {
+                    li {
+                        color: $mainColor;
+                        font-size: 20px;
+                        font-weight: 500;
+                        margin-bottom: 11px;
+
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: $mainColor;
+        padding: 23px 0;
+        text-align: center;
+
+        h5 {
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}

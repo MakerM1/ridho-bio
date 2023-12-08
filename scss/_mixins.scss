@@ -1,0 +1,37 @@
+@mixin centerContainer ($maxWidth) {
+    max-width: $maxWidth;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@mixin mainButtonStyle ($buttonTextColor, $buttonBackgroundColor) {
+    background-color: $buttonBackgroundColor;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: $buttonTextColor;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+@mixin sectionTitle ($weight) {
+    color: $mainColor;
+    font-size: 64px;
+    font-weight: $weight;
+    line-height: 77.45px;
+}
+
+@mixin inputStyle {
+    background-color: $mainColor;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    border: 2px solid transparent;
+
+    &::placeholder {
+        color: white;
+    }
+}
