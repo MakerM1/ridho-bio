@@ -162,10 +162,14 @@ body .main-header .logo {
   font-size: 40px;
   color: white;
   font-weight: 700;
+  margin-right: 20px;
 }
 body .main-header .main-nav {
   max-width: 475px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 body .main-header .main-nav ul {
   width: 100%;
@@ -182,6 +186,43 @@ body .main-header .main-nav ul li {
 }
 body .main-header .main-nav ul li:nth-child(1) {
   font-weight: 700;
+}
+body .main-header .main-nav .hamburger-menu {
+  margin-right: 20px;
+  max-width: 25px;
+  width: 100%;
+  display: none;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+body .main-header .main-nav .hamburger-menu .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+body .main-header .main-nav .hamburger-menu .line:nth-child(3) {
+  margin-bottom: 0;
+}
+@media (max-width: 560px) {
+  body .main-header .main-nav {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  body .main-header .main-nav ul {
+    display: none;
+  }
+  body .main-header .main-nav .hamburger-menu {
+    display: inline-block;
+  }
+}
+@media (max-width: 560px) {
+  body .main-header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 body .s1 {
   margin-top: 60px;
@@ -350,6 +391,8 @@ body .s3 .bottom-part {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-bottom: 89px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 body .s3 .bottom-part .card {
   padding: 10px;
@@ -361,6 +404,11 @@ body .s3 .bottom-part .card {
   color: white;
   -webkit-box-shadow: 0px 5px 15px -1px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 5px 15px -1px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 830px) {
+  body .s3 .bottom-part .card {
+    margin-bottom: 20px;
+  }
 }
 body .s3 .bottom-part .card img {
   margin-top: 35px;
@@ -412,6 +460,7 @@ body .s4 .lesson-cards .lesson {
   background-color: rgb(217, 217, 217);
   position: relative;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 body .s4 .lesson-cards .lesson .img-placeholder {
   max-width: 200px;
@@ -438,7 +487,7 @@ body .s4 .lesson-cards .lesson .info p {
   max-width: 200px;
   width: 100%;
   color: rgb(33, 37, 41);
-  font-size: 20px;
+  font-size: 1pc;
 }
 body .s5 {
   text-align: center;
@@ -466,6 +515,11 @@ body .s5 .s5-container {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-bottom: 34px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+body .s5 .s5-container .s5-left-side {
+  margin-bottom: 20px;
 }
 body .s5 .s5-container .s5-left-side form {
   max-width: 610px;

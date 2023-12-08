@@ -17,11 +17,13 @@ body {
             font-size: 40px;
             color: white;
             font-weight: 700;
+            margin-right: 20px;
         }
 
         .main-nav {
             max-width: 475px;
             width: 100%;
+            display: flex;
 
             ul {
                 width: 100%;
@@ -37,6 +39,41 @@ body {
                     }
                 }
             }
+
+            .hamburger-menu {
+                margin-right: 20px;
+                max-width: 25px;
+                width: 100%;
+                display: none;
+                align-self: flex-end;
+
+                .line {
+                    width: 25px;
+                    height: 3px;
+                    background-color: white;
+                    margin-bottom: 5px;
+
+                    &:nth-child(3) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            @media (max-width: 560px) {
+                justify-content: flex-end;
+
+                ul {
+                    display: none;
+                }
+
+                .hamburger-menu {
+                    display: inline-block;
+                }
+            }
+        }
+
+        @media (max-width: 560px) {
+            justify-content: space-between;
         }
     }
 
@@ -172,6 +209,7 @@ body {
             display: flex;
             justify-content: space-around;
             margin-bottom: 89px;
+            flex-wrap: wrap;
 
             .card {
                 padding: 10px;
@@ -182,6 +220,10 @@ body {
                 border-radius: 10px;
                 color: white;
                 box-shadow: 0px 5px 15px -1px rgba(0, 0, 0, 0.75);
+
+                @media (max-width: 830px) {
+                    margin-bottom: 20px;
+                }
 
                 img {
                     margin-top: 35px;
@@ -233,6 +275,7 @@ body {
                 background-color: $cardColor1;
                 position: relative;
                 margin-bottom: 20px;
+                overflow: hidden;
 
                 .img-placeholder {
                     max-width: 200px;
@@ -261,7 +304,7 @@ body {
                         max-width: 200px;
                         width: 100%;
                         color: $mainColor;
-                        font-size: 20px;
+                        font-size: 1pc;
                     }
                 }
             }
@@ -287,8 +330,11 @@ body {
             margin: 0 auto;
             align-items: flex-start;
             margin-bottom: 34px;
+            flex-wrap: wrap;
 
             .s5-left-side {
+                margin-bottom: 20px;
+
                 form {
                     max-width: 610px;
                     width: 100%;
