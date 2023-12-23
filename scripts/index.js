@@ -5,10 +5,13 @@ headerLinks.forEach((link) => {
         for (let i = 0; i < headerLinks.length; i++) {
             if (headerLinks[i].classList.contains('active')) {
                 headerLinks[i].classList.remove('active')
-            } else if (!headerLinks[i].classList.contains('active')) {
+            }
+
+            if (!headerLinks[i].classList.contains('active')) {
                 link.classList.add('active')
             }
         }
+
     })
 })
 
